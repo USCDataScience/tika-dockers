@@ -19,16 +19,11 @@ FROM ubuntu:16.04
 MAINTAINER Apache Tika Team
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        build-essential \
+        apt-utils \
         curl \
         git \
-        libfreetype6-dev \
-        libpng12-dev \
-        libzmq3-dev \
-        pkg-config \
-	python \
-        python-dev \
-        rsync \
+        python \
+        python2.7-dev \
         software-properties-common \
         unzip \
         wget \
@@ -49,7 +44,7 @@ RUN pip --no-cache-dir install \
         requests
 
 # Install tensorflow:1.3.0 for python 2.7
-ENV TF_BINARY_URL https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.3.0-cp27-none-linux_x86_64.whl
+ENV TF_BINARY_URL https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.4.0-cp27-none-linux_x86_64.whl
 RUN pip --no-cache-dir install $TF_BINARY_URL
 
 CMD ["python"]

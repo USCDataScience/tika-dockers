@@ -15,18 +15,13 @@
 # limitations under the License.
 #
 
-FROM tensorflow/tensorflow:1.3.0-py3
+FROM uscdatascience/tf-tika-base
 MAINTAINER Apache Tika Team
-
-# Install python requirements
-RUN \
-  pip3 install flask requests pillow
 
 # Download the pretrained inception v4 checkpoint & other meta files
 WORKDIR /usr/share/apache-tika/models/dl/image-video/recognition/
 
-RUN \
-    curl -O http://download.tensorflow.org/models/inception_v4_2016_09_09.tar.gz && \
+RUN curl -O http://download.tensorflow.org/models/inception_v4_2016_09_09.tar.gz && \
     tar -xzvf inception_v4_2016_09_09.tar.gz && rm -rf inception_v4_2016_09_09.tar.gz && \
     curl -O https://raw.githubusercontent.com/tensorflow/models/master/research/inception/inception/data/imagenet_lsvrc_2015_synsets.txt && \
     curl -O https://raw.githubusercontent.com/tensorflow/models/master/research/inception/inception/data/imagenet_metadata.txt
@@ -34,17 +29,25 @@ RUN \
 # Download server related source files
 WORKDIR /usr/share/apache-tika/src/dl/image-video/recognition/
 
-RUN \
-    curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/recognition/tf/inceptionapi.py && \
+RUN curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/recognition/tf/inceptionapi.py && \
     curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/recognition/tf/inception_v4.py && \
     chmod +x inceptionapi.py
 
 WORKDIR /
 
+# Remove unnecessary packages comes with base
+RUN apt-get -y remove \
+        apt-utils \
+        curl \
+        git \
+        software-properties-common \
+        unzip \
+        wget
+
 # Add symbolic link to inceptionapi.py
 RUN ln -s /usr/share/apache-tika/src/dl/image-video/recognition/inceptionapi.py /usr/bin/inceptionapi
 
-# expose API port, this is the default port
+# Expose API port, this is the default port
 EXPOSE 8764
 
 CMD inceptionapi
