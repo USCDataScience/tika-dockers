@@ -1,6 +1,6 @@
 # Tika Image and Video Object Detection and Captioning Dockers
 
-This repository contains Docker File Image source for the use of image and video object identification and detection and image and video captioning using [Tensorflow](http://tensorflow.org/) and the [Apache Tika](http://tika.apache.org/) toolkit. You may want to check out our [Image Captioning Project by USC Data Science])http://github.com/USCDataScience/img2text.git).
+This repository contains Docker File Image source for the use of image and video object identification and detection and image and video captioning using [Tensorflow](http://tensorflow.org/) and the [Apache Tika](http://tika.apache.org/) toolkit. You may want to check out our [Image Captioning Project by USC Data Science](http://github.com/USCDataScience/img2text.git).
 
 # Citation:
 
