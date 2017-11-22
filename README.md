@@ -5,8 +5,7 @@ This repository contains Docker File Image source for the use of image and video
 # To Build the Dockers
   1. `docker build -f InceptionRestDockerfile -t uscdatascience/inception-rest-tika .` - Builds the Inception v4 model Image detection capability. 
   2. `docker build -f Im2txtRestDockerfile  -t uscdatascience/im2txt-rest-tika .` - Builds the Show and Tell model Image Text Captioning capability. 
-  3. `docker build -f InceptionVideoRestDockerfile -t uscdatascience/inception-video-rest-tika .` - Builds a Docker with OpenCV and Tensorflow that can be used to idenitfy objects in Videos.
-
+  3. `docker build -f InceptionVideoRestDockerfile -t uscdatascience/inception-video-rest-tika .` - Builds a Docker with OpenCV and Tensorflow that can be used to idenitfy objects in Videos.
 
 # To Test the Dockers
   1. `docker run -it -p 8764:8764 uscdatascience/inception-rest-tika` - then run the tests in [ObjectRecognitionParserTest class](https://github.com/apache/tika/blob/master/tika-parsers/src/test/java/org/apache/tika/parser/recognition/ObjectRecognitionParserTest.java)
