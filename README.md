@@ -3,6 +3,7 @@
 This repository contains Docker File Image source for the use of image and video object identification and detection and image and video captioning using [Tensorflow](http://tensorflow.org/) and the [Apache Tika](http://tika.apache.org/) toolkit. You may want to check out our [Image Captioning Project by USC Data Science](http://github.com/USCDataScience/img2text.git).
 
 # To Build the Dockers
+  1. `docker build -f InceptionRestDockerfile -t uscdatascience/inception-rest-tika .` - Builds the Inception v4 model Image detection capability. 
 
 # To Test the Dockers
   1. `docker run -it -p 8764:8764 uscdatascience/inception-rest-tika` - then run the tests in [ObjectRecognitionParserTest class](https://github.com/apache/tika/blob/master/tika-parsers/src/test/java/org/apache/tika/parser/recognition/ObjectRecognitionParserTest.java)
