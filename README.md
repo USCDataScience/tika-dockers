@@ -33,6 +33,10 @@ If you use this work, please cite:
 }
 ```
 
+See Also
+========
+The [Tika Advanced Object Recognition Page](Object_Recognition_.28Computer_Vision.29_support) for more advanced tutorials on how to use the Dockers with Tika.
+
 Questions, comments?
 ===================
 Send them to [Chris A. Mattmann](mailto:chris.a.mattmann@jpl.nasa.gov) or [Thejan Wijesinghe](mailto:thejan.k.wijesinghe@gmail.com).
