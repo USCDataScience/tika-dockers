@@ -34,10 +34,10 @@ RUN curl -O https://raw.githubusercontent.com/apache/tika/master/tika-parsers/sr
 # Download server related source files
 WORKDIR /usr/share/apache-tika/src/dl/image/caption/
 
-RUN curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/caption_generator.py && \
-    curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/im2txtapi.py && \
-    curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/model_wrapper.py && \
-    curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/vocabulary.py && \
+RUN curl -O https://raw.githubusercontent.com/apache/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/caption_generator.py && \
+    curl -O https://raw.githubusercontent.com/apache/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/im2txtapi.py && \
+    curl -O https://raw.githubusercontent.com/apache/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/model_wrapper.py && \
+    curl -O https://raw.githubusercontent.com/apache/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/captioning/tf/vocabulary.py && \
     chmod +x im2txtapi.py
 
 WORKDIR /

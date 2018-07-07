@@ -29,8 +29,8 @@ RUN curl -O http://download.tensorflow.org/models/inception_v4_2016_09_09.tar.gz
 # Download server related source files
 WORKDIR /usr/share/apache-tika/src/dl/image-video/recognition/
 
-RUN curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/recognition/tf/inceptionapi.py && \
-    curl -O https://raw.githubusercontent.com/ThejanW/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/recognition/tf/inception_v4.py && \
+RUN curl -O https://raw.githubusercontent.com/apache/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/recognition/tf/inceptionapi.py && \
+    curl -O https://raw.githubusercontent.com/apache/tika/master/tika-parsers/src/main/resources/org/apache/tika/parser/recognition/tf/inception_v4.py && \
     chmod +x inceptionapi.py
 
 WORKDIR /
