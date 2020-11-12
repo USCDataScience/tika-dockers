@@ -62,8 +62,8 @@ WORKDIR /usr/share/apache-tika/models/dl/image-video/recognition/
 
 RUN curl -O http://download.tensorflow.org/models/inception_v4_2016_09_09.tar.gz && \
     tar -xzvf inception_v4_2016_09_09.tar.gz && rm -rf inception_v4_2016_09_09.tar.gz && \
-    curl -O https://raw.githubusercontent.com/tensorflow/models/master/research/inception/inception/data/imagenet_lsvrc_2015_synsets.txt && \
-    curl -O https://raw.githubusercontent.com/tensorflow/models/master/research/inception/inception/data/imagenet_metadata.txt
+    curl -O https://raw.githubusercontent.com/tensorflow/models/master/research/slim/datasets/imagenet_lsvrc_2015_synsets.txt && \
+    curl -O https://raw.githubusercontent.com/tensorflow/models/master/research/slim/datasets/imagenet_metadata.txt
 
 # Download server related source files
 WORKDIR /usr/share/apache-tika/src/dl/image-video/recognition/
