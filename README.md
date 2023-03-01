@@ -37,7 +37,7 @@ If you use this work, please cite first [USC Data Science](https://github.com/US
 
 See Also
 ========
-The [Tika Advanced Object Recognition Page](https://wiki.apache.org/tika/FrontPage#Object_Recognition_.28Computer_Vision.29_support) for more advanced tutorials on how to use the Dockers with Tika.
+The [Tika Advanced Object Recognition Page](https://cwiki.apache.org/confluence/display/TIKA/Home#Home-ObjectRecognition(ComputerVision)support) for more advanced tutorials on how to use the Dockers with Tika.
 
 Questions, comments?
 ===================
